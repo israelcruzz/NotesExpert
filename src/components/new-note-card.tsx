@@ -28,7 +28,10 @@ export const NewNoteCard = ({ onNoteCreated }: NewNoteCardProps) => {
   const handleSaveNote = (event: FormEvent) => {
     event.preventDefault();
 
-    if (content === "") return;
+    if (content === ""){
+      toast.message('O texto não pode estar em branco')
+      return
+    }
 
     onNoteCreated(content);
     setContent("");
