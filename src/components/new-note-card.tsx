@@ -42,6 +42,7 @@ export const NewNoteCard = ({ onNoteCreated }: NewNoteCardProps) => {
 
     if (!isSpeechRecognitionAPIAvaliable) {
       alert("Infelizmente seu navegador não suporta a api de navegação.");
+      return;
     }
 
     setShouldShowOnBoarding(false);
